@@ -20,10 +20,10 @@ public class N5 {
     public static void newMap() {
         System.out.println("HashMap");
         HashMap<Integer, String> map = new HashMap<>();
-        map.put(0, "Maria");
-        map.put(1, "Maxim");
-        map.put(2, "Irina");
-        map.putIfAbsent(3, "Alex");
+        map.put(0, "Irina");
+        map.put(1, "Vadim");
+        map.put(2, "Dana");
+        map.putIfAbsent(3, "Petro");
         map.forEach((k, v) -> System.out.println("Key: " + k + " Volume: " + v));
         map.replaceAll((k, v) -> v = v + "!");
         map.forEach((k, v) -> System.out.println("Key: " + k + " Volume: " + v));
@@ -58,14 +58,14 @@ public class N5 {
         newMap.forEach((k, v) -> System.out.print(k + " " + v));
         float stop = System.currentTimeMillis() - start;
         System.out.println();
-        System.out.println("Время прямого перебора HashMap " + stop + " мс.");
+        System.out.println("Перебор HashMap " + stop + " мс.");
 
 
         start = System.currentTimeMillis();
         newTreeMap.forEach((k, v) -> System.out.print(k + " " + v));
         stop = System.currentTimeMillis() - start;
         System.out.println();
-        System.out.println("Время прямого перебора TreeMap " + stop + " мс.");
+        System.out.println("Перебор TreeMap " + stop + " мс.");
 
         start = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
@@ -74,7 +74,7 @@ public class N5 {
         }
         stop = System.currentTimeMillis() - start;
         System.out.println();
-        System.out.println("Время рандомного перебора HashMap " + stop + " мс.");
+        System.out.println("Перебор HashMap " + stop + " мс.");
 
 
         start = System.currentTimeMillis();
@@ -84,7 +84,7 @@ public class N5 {
         }
         stop = System.currentTimeMillis() - start;
         System.out.println();
-        System.out.println("Время рандомного перебора TreeMap " + stop + " мс.");
+        System.out.println("Перебор TreeMap " + stop + " мс.");
 
     }
 
